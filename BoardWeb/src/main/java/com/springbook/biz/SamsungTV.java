@@ -36,6 +36,7 @@ package com.springbook.biz;
 
 public class SamsungTV implements TV {
 	private SonySpeaker speaker;
+	private int price;
 	
 	public SamsungTV() {
 		System.out.println("====>伙己萍厚(1) 按眉 积己");
@@ -44,9 +45,15 @@ public class SamsungTV implements TV {
 		System.out.println("====>伙己萍厚(2) 按眉 积己");
 		this.speaker = speaker;
 	}
-
+	
+	public SamsungTV(SonySpeaker speaker, int price) {
+		System.out.println("====>伙己萍厚(3) 按眉 积己");
+		this.speaker = speaker;
+		this.price = price;
+	}
+	
 	public void powerOn() {
-		System.out.println("伙己萍厚 ----傈盔 囊促.");
+		System.out.println("伙己萍厚 ----傈盔 囊促. (啊拜 : " + price + ")");
 	}
 
 	public void powerOff() {
