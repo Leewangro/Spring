@@ -1,6 +1,6 @@
 package com.springbook.biz;
 
-public class SonySpeaker {
+public class SonySpeaker implements Speaker{
 	
 	public SonySpeaker() {
 		System.out.println("===> SonySpeaker 按眉 积己");
@@ -8,7 +8,7 @@ public class SonySpeaker {
 	public void volumeUp() {
 		System.out.println("===> SonySpeaker ----家府甫 臭牢促");
 	}
-	public void volumedown() {
+	public void volumeDown() {
 		System.out.println("===> SonySpeaker ----家府甫 撤冕促");
 	}
 }
