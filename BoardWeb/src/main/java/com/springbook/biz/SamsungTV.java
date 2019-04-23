@@ -38,7 +38,11 @@ public class SamsungTV implements TV {
 	private SonySpeaker speaker;
 	
 	public SamsungTV() {
-		System.out.println("====>伙己萍厚 按眉 积己");
+		System.out.println("====>伙己萍厚(1) 按眉 积己");
+	}
+	public SamsungTV(SonySpeaker speaker) {
+		System.out.println("====>伙己萍厚(2) 按眉 积己");
+		this.speaker = speaker;
 	}
 
 	public void powerOn() {
@@ -50,12 +54,10 @@ public class SamsungTV implements TV {
 	}
 
 	public void volumeUp() {
-		speaker = new SonySpeaker();
 		speaker.volumeUp();
 	}
 
 	public void volumeDown() {
-		speaker = new SonySpeaker();
 		speaker.volumedown();
 	}
 
