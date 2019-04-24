@@ -1,6 +1,6 @@
 package com.springbook.biz;
 
-import java.util.Map;
+import java.util.Properties;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -10,8 +10,8 @@ public class CollectionBeanClient {
 		AbstractApplicationContext factory = new GenericXmlApplicationContext("applicationContext.xml");
 		
 		CollectionBean bean = (CollectionBean) factory.getBean("collectionBean");
-		Map<String, String> addressList = bean.getAddressList();
-		for (String key : addressList.keySet()) {
+		Properties addressList = bean.getAddressList();
+		for (String key : addressList.stringPropertyNames()) {
 		    System.out.println( String.format("Å° : %s, °ª : %s", key, addressList.get(key)) );
 		}
 		factory.close();
