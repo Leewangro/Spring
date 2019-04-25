@@ -1,5 +1,7 @@
 package com.springbook.biz;
 
+import org.springframework.stereotype.Component;
+
 /*
  * public class LgTV {
  * 
@@ -10,23 +12,26 @@ package com.springbook.biz;
  * 
  * }
  */
-
+@Component("tv")
 public class LgTV implements TV {
-
+	public LgTV() {
+		System.out.println("LgTv 객체 생성");
+	}
+	
 	public void powerOn() {
 		System.out.println("엘지티비 ----전원 켠다.");
 	}
 
 	public void powerOff() {
-		System.out.println("엘지티비 ----전원 켠다.");
+		System.out.println("엘지티비 ----전원 끊다.");
 	}
 
 	public void volumeUp() {
-		System.out.println("엘지티비 ----전원 켠다.");
+		System.out.println("엘지티비 ----소리를 높인다.");
 	}
 
 	public void volumeDown() {
-		System.out.println("엘지티비 ----전원 켠다.");
+		System.out.println("엘지티비 ----소리를 줄인다.");
 	}
 
 }
